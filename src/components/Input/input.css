@@ -1,0 +1,15 @@
+.mainContainer {
+  width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  min-height: 65px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 8px;
+}

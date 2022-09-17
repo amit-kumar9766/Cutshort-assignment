@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import OnboardingName from './pages/OnboardingName'
+import OnboardingHome from './pages/OnboardingHome'
+import OnboardingPlanning from './pages/OnboardingPlanning'
+import OnboardingCompletion from './pages/OnboardingCompletion'
 
 function App() {
+  const [state, setState] = useState('firstPage')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!!(state === 'firstPage') && <OnboardingName change={setState} />}
+      {!!(state === 'secondPage') && <OnboardingHome change={setState} />}
+      {!!(state === 'thirdPage') && <OnboardingPlanning change={setState} />}
+      {!!(state === 'fourthPage') && <OnboardingCompletion />}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
