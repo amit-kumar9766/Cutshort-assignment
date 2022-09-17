@@ -5,7 +5,10 @@ import Input from '../components/Input'
 import Steps from '../components/Steps'
 import './pages.css'
 
-const OnboardingName = ({ change }: any) => {
+interface OnboardingNameProps {
+  change: (a: string) => void
+}
+const OnboardingName = ({ change }: OnboardingNameProps) => {
   const [fullName, setFullName] = useState<string>('')
   const [displayName, setDisplayName] = useState<string>('')
   const onSubmitName = () => {

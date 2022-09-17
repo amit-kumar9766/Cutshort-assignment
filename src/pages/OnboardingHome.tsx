@@ -4,7 +4,10 @@ import { Button } from '../components/Button/Button'
 import Input from '../components/Input'
 import Steps from '../components/Steps'
 
-const OnboardingName = ({ change }: any) => {
+interface OnboardingProps{
+  change:(a:string)=>void
+}
+const OnboardingName = ({ change }:OnboardingProps) => {
   const [workspaceName, setWorkSpaceName] = useState<string>('')
   const [workspaceUrl, setWorkspaceUrl] = useState<string>('')
   const onSubmitHome = () => {

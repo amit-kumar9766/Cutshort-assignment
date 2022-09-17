@@ -5,7 +5,11 @@ import personIcon from '../components/assets/personIcon.png'
 import groupIcon from '../components/assets/group-icon.png'
 import { Button } from '../components/Button/Button'
 
-const OnboardingPlanning = ({ change }: any) => {
+interface OnboardingPlanningProps {
+  change: (a: string) => void
+}
+
+const OnboardingPlanning = ({ change }: OnboardingPlanningProps) => {
   const [selectCard, setSelectCard] = useState<number>(0)
   const onSubmitPlan = () => {
     change('fourthPage')
@@ -13,7 +17,6 @@ const OnboardingPlanning = ({ change }: any) => {
 
   return (
     <form className="form" onSubmit={onSubmitPlan}>
-
       <Steps totalSteps={4} currentSteps={3} />
 
       <h3>How are you planning to use Eden?</h3>
