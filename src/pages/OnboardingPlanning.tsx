@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import Input from '../components/Input'
 import Steps from '../components/Steps'
-import { Title } from '../components/Title'
 import Card from '../components/Card/Card'
 import personIcon from '../components/assets/personIcon.png'
 import groupIcon from '../components/assets/group-icon.png'
@@ -15,6 +13,7 @@ const OnboardingPlanning = ({ change }: any) => {
 
   return (
     <form className="form" onSubmit={onSubmitPlan}>
+
       <Steps totalSteps={4} currentSteps={3} />
 
       <h3>How are you planning to use Eden?</h3>
