@@ -5,7 +5,7 @@ import Steps from '../components/Steps'
 import { Title } from '../components/Title'
 import Card from '../components/Card/Card'
 import personIcon from '../components/assets/personIcon.png'
-import groupIcon from '../components/assets/groupIcon.png'
+import groupIcon from '../components/assets/group-icon.png'
 import { Button } from '../components/Button/Button'
 
 const OnboardingPlanning = ({change}:any) => {
@@ -25,13 +25,13 @@ const OnboardingPlanning = ({change}:any) => {
 
       <Card
         title={'For myself'}
-        avatar={<img src={personIcon}  alt="person-icon"/>}
+        Avatar={<img src={personIcon}  alt="person-icon"/>}
         desc="Write Better.Think more clearly.Stay organized"
         onClick={() => {}}
       />
       <Card
         title={'With my team'}
-        avatar={<img src={groupIcon}  alt="person-icon"/>}
+        Avatar={<img src={groupIcon}  alt="person-icon"/>}
         desc="Wikis ,docs,tasks and projects all in one place"
         onClick={() => {}}
       />

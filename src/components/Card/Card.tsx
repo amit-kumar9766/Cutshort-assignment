@@ -1,14 +1,9 @@
 import React from 'react'
-import './index.css'
 
-import 'card.css'
-type avatarProps={
-  src:string;
-  alt:string;
-}
+import './card.css'
+
 type cardProps = {
-
-  avatar?: any;
+  Avatar?: any
   title: string
   desc: string
   onClick: () => void
@@ -16,10 +11,10 @@ type cardProps = {
 }
 
 const Card = (props: cardProps) => {
-  const { avatar, title, desc, onClick, className } = props
+  const { Avatar, title, desc, onClick, className } = props
   return (
-    <div className={className} onClick={onClick}>
-      <img src={avatar?.src} alt={avatar?.alt} />
+    <div className="card" onClick={onClick}>
+      {Avatar}
       <h4>{title}</h4>
       <p>{desc}</p>
     </div>

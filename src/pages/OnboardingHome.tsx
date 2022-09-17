@@ -10,7 +10,7 @@ const OnboardingName = ({change}:any) => {
   const [workspaceUrl, setWorkspaceUrl] = useState<string>('')
   const onSubmitHome=()=>{
     //router.push()
-    change("secondPage")
+    change("thirdPage")
   }
   return (
     <form

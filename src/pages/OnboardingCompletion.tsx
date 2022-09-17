@@ -1,7 +1,7 @@
 import React from 'react'
 import Steps from '../components/Steps'
 import { Title } from '../components/Title'
-import completionIcon from '../components/assets/completion.png'
+import completionIcon from '../components/assets/confirmation.png'
 import { Button } from '../components/Button/Button'
 
 const OnboardingCompletion = () => {
