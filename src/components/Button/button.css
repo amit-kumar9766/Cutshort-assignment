@@ -1,14 +1,15 @@
 .button-class {
   padding: 10px;
-  background-color: #7B68EE;
+  background-color: #7b68ee;
   color: #ffffff;
-  border:0px;
-  width:350px;
+  border: 0px;
+  width: 350px;
   border-radius: 4px;
   outline: unset;
+  margin-top: 10px;
 }
 
-.button-class :disabled {
+.button-class:disabled {
   background: grey;
   cursor: not-allowed;
 }

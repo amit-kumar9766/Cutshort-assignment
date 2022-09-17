@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { Button } from '../components/Button/Button'
 import Input from '../components/Input'
 import Steps from '../components/Steps'
-import { Title } from '../components/Title'
-import "./pages.css"
+import './pages.css'
 
 const OnboardingName = ({ change }: any) => {
   const [fullName, setFullName] = useState<string>('')
@@ -14,16 +13,12 @@ const OnboardingName = ({ change }: any) => {
   }
 
   return (
-    <form
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-      onSubmit={onSubmitName}
-    >
-      <Title />
+    <form className="form" onSubmit={onSubmitName}>
       <Steps totalSteps={4} currentSteps={1} />
 
       <h3>Wecome !First things first...</h3>
       <p>You can always change them later.</p>
-      
+
       <div className="input-form">
         <Input
           label="Full Name"

@@ -4,8 +4,12 @@
 }
 
 .add-on {
-  padding: 10px;
   background-color: #ccc;
+  margin: 0px;
+  position: relative;
+  z-index: 10;
+  right: -2px;
+  padding: 9.5px;
 }
 
 .card-class {
@@ -13,4 +17,10 @@
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

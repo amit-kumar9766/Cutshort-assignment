@@ -3,21 +3,15 @@ import { useState } from 'react'
 import { Button } from '../components/Button/Button'
 import Input from '../components/Input'
 import Steps from '../components/Steps'
-import { Title } from '../components/Title'
 
 const OnboardingName = ({ change }: any) => {
   const [workspaceName, setWorkSpaceName] = useState<string>('')
   const [workspaceUrl, setWorkspaceUrl] = useState<string>('')
   const onSubmitHome = () => {
-    //router.push()
     change('thirdPage')
   }
   return (
-    <form
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-      onSubmit={onSubmitHome}
-    >
-      <Title />
+    <form className="form" onSubmit={onSubmitHome}>
       <Steps totalSteps={4} currentSteps={2} />
 
       <h3>Lets set up a home for all your work</h3>

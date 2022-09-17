@@ -12,13 +12,9 @@ const OnboardingPlanning = ({ change }: any) => {
   const onSubmitPlan = () => {
     change('fourthPage')
   }
-  
+
   return (
-    <form
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-      onSubmit={onSubmitPlan}
-    >
-      <Title />
+    <form className="form" onSubmit={onSubmitPlan}>
       <Steps totalSteps={4} currentSteps={3} />
 
       <h3>How are you planning to use Eden?</h3>
@@ -26,22 +22,21 @@ const OnboardingPlanning = ({ change }: any) => {
 
       <div className="card-class">
         <Card
-          title={'For myself'}
+          title="For myself"
           Avatar={<img src={personIcon} alt="person-icon" />}
           desc="Write Better.Think more clearly.Stay organized"
           onClick={() => setSelectCard(1)}
-          isSelected={selectCard===1}
+          isSelected={selectCard === 1}
         />
         <Card
-          title={'With my team'}
+          title="With my team"
           Avatar={<img src={groupIcon} alt="person-icon" />}
           desc="Wikis ,docs,tasks and projects all in one place"
           onClick={() => setSelectCard(2)}
-          isSelected={selectCard===2}
+          isSelected={selectCard === 2}
         />
       </div>
 
-      {/* <Card  avatar={src:groupIcon ,alt:"person-icon"} /> */}
       <Button onClick={onSubmitPlan} disabled={!selectCard}>
         Create Workspace
       </Button>
