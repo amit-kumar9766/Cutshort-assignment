@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import "./input.css"
+import React, { memo } from 'react'
+import './input.css'
 interface InputProps {
   className?: string
   label?: string
@@ -21,28 +21,28 @@ const Input = (props: InputProps) => {
   } = props
   const onInputChange = (event: React.SyntheticEvent) => {
     const { value: userInput } = event.target as HTMLInputElement
+    setValue?.(userInput)
   }
   return (
-    <div className="mainContainer">
-      <div className={className}>
-        {label && (
-          // eslint-disable-next-line jsx-a11y/label-has-associated-control
-          <label htmlFor="input">
-            <span>{label}</span>
-          </label>
-        )}
-        <div>
-          {addOnBefore}
-          <input
-            disabled={disabled}
-            id="input"
-            placeholder={placeholder}
-            value={value}
-            onChange={onInputChange}
-          />
-        </div>
+    <div className="inputWrapper">
+      {label && (
+        // eslint-disable-next-line jsx-a11y/label-has-associated-control
+        <label htmlFor="input">
+          <h5>{label}</h5>
+        </label>
+      )}
+      <div className="input-addon">
+        {addOnBefore}
+        <input
+          disabled={disabled}
+          id="input"
+          placeholder={placeholder}
+          value={value}
+          onChange={onInputChange}
+          className="input"
+        />
       </div>
     </div>
   )
 }
-export default Input;
+export default Input

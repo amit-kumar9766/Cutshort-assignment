@@ -6,7 +6,7 @@ import OnboardingPlanning from './pages/OnboardingPlanning'
 import OnboardingCompletion from './pages/OnboardingCompletion'
 
 function App() {
-  const [state, setState] = useState('firstPage')
+  const [state, setState] = useState('thirdPage')
 
   return (
     <div className="App">

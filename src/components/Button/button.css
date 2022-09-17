@@ -1,0 +1,14 @@
+.button-class {
+  padding: 10px;
+  background-color: #7B68EE;
+  color: #ffffff;
+  border:0px;
+  width:350px;
+  border-radius: 4px;
+  outline: unset;
+}
+
+.button-class :disabled {
+  background: grey;
+  cursor: not-allowed;
+}

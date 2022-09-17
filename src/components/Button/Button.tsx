@@ -1,4 +1,6 @@
 import React, { PropsWithChildren } from 'react'
+import "./button.css";
+
 type ButtonProps = {
   className?: string
   onClick?: (e: React.MouseEvent) => void
@@ -10,7 +12,7 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
   disabled = false,
   ...rest
 }) => (
-  <button type="button" className={className} disabled={disabled} {...rest}>
+  <button type="button" className="button-class" disabled={disabled} {...rest}>
     {children}
   </button>
 )
